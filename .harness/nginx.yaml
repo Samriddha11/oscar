@@ -1,5 +1,8 @@
 service:
-  name: nginx
+  name: nginx-dev
   identifier: nginx
   orgIdentifier: sam
   projectIdentifier: fftest
+  serviceDefinition:
+    spec: {}
+    type: Kubernetes
