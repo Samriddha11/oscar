@@ -3,18 +3,14 @@ def iswhat(arms):
 	b=arms[1]
 	c=arms[2]
 	if a==b and b==c and c==a:
-		print("Equi")
+		print("Equilateral")
 	elif a==b or a==c or b==c:
-		print("Iso")
+		print("Isoceles")
 	else:
 		print("No Match")
 
-def toy_triangle(string,num):
-	splits=string.split(" ")
-	print(splits)
-	for i in range(0,num):
-		iswhat(splits[i])
-    #return newstring
-#toy_triangle("2 2 1",'3 3 3','6 5 7', 3)
-toy_triangle("221 333 657", 3)
-print("Done")
+def toy_triangle(*args):
+	num=args[0]
+	for i in range(1,num+1):
+		iswhat(args[i].split(" "))
+toy_triangle(4,'36 36 30','47 8 60','46 96 90','86 86 86')
